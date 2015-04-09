@@ -18,7 +18,7 @@ public class DeleteMeApplication extends SpringBootServletInitializer {
         SpringApplication.run(DeleteMeApplication.class, args);
     }
 
-    // SERVLETinitializer
+    // Initialisation
     @Override
     protected final SpringApplicationBuilder configure(final SpringApplicationBuilder application){
         return application.sources(DeleteMeApplication.class);

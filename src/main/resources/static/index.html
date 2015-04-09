@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html lang="fr" ng-app="deleteMeApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>DeleteMe Application</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <link href="css/style.css" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Accueil</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<h3>Page d'accueil </h3>
+
+
+    <div class="container-fluid" ng-controller="CustomerCtrl">
+
+
+
+            <div id="customerList">
+                <h2> Liste des utilisateurs</h2>
+
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>Date de création</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="customer in customers | filter:query">
+                        <td>{{ customer.idCustomer }}</td>
+                        <td>{{ customer.lastname }}</td>
+                        <td>{{ customer.firstName }}</td>
+                        <td>{{ customer.dateCreated | date:"MM/dd/yyyy"}}</td>
+
+
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+</body>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-resource.min.js"></script>
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<script src="js/app/application.js"></script>
+<script src="js/app/controllers.js"></script>
+<script src="js/app/services.js"></script>
+
+
+</html>
