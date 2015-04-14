@@ -1,6 +1,6 @@
 (function(angular) {
-    var CustomerFactory = function ($resource) {
-        return $resource('/api/customer/list', {
+    var UserFactory = function ($resource) {
+        return $resource('/api/user/list', {
           //  id: 'id'
         }, {
             update: {
@@ -12,6 +12,6 @@
         });
     };
 
-    CustomerFactory.$inject = ['$resource'];
-    angular.module('deleteMeApp.services').factory('customerService', CustomerFactory);
+    UserFactory.$inject = ['$resource'];
+    angular.module('deleteMeApp.services').factory('userService', UserFactory);
 }(angular));

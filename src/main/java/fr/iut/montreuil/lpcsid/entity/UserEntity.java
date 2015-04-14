@@ -9,14 +9,14 @@ import java.util.Date;
  */
 
 @Entity
-@Table(name = "customer")
-public class CustomerEntity implements Serializable {
+@Table(name = "user")
+public class UserEntity implements Serializable {
 
     //Variables
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "customer_id")
-    private Long idCustomer;
+    @Column(name = "user_id")
+    private Long idUser;
 
     @Column(nullable = false)
     private String civilities;
@@ -58,13 +58,13 @@ public class CustomerEntity implements Serializable {
     private Date dateCreated;
 
 
-    public CustomerEntity(){
+    public UserEntity(){
 
     }
 
     // Par l'utilisateur
 
-    public CustomerEntity(String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password, Date dateCreated) {
+    public UserEntity(String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password, Date dateCreated) {
         this.civilities = civilities;
         this.lastname = lastname;
         this.firstName = firstName;
@@ -81,8 +81,8 @@ public class CustomerEntity implements Serializable {
 
     }
 
-    public CustomerEntity(Long idCustomer, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
-        this.idCustomer = idCustomer;
+    public UserEntity(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
+        this.idUser = idUser;
         this.civilities = civilities;
         this.lastname = lastname;
         this.firstName = firstName;
@@ -98,12 +98,12 @@ public class CustomerEntity implements Serializable {
     }
 
     //getter & setters
-    public Long getIdCustomer() {
-        return idCustomer;
+    public Long getIdUser() {
+        return idUser;
     }
 
-    public void setIdCustomer(Long id) {
-        this.idCustomer = id;
+    public void setIdUser(Long id) {
+        this.idUser = id;
     }
 
     public String getName() {
