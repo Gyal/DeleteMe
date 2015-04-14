@@ -85,7 +85,7 @@ public class UserEntity implements Serializable {
 
     }
 
-    public UserEntity(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
+    public UserEntity(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password, Date dateCreated) {
         this.idUser = idUser;
         this.civilities = civilities;
         this.lastname = lastname;
@@ -99,6 +99,7 @@ public class UserEntity implements Serializable {
         this.phoneNumber = phoneNumber;
         this.connexionLogin = connexionLogin;
         this.password = password;
+        this.dateCreated = dateCreated;
     }
 
     //getter & setters

@@ -1,9 +1,5 @@
 package fr.iut.montreuil.lpcsid.dto;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.util.Date;
 
 /**
@@ -68,7 +64,7 @@ public class UserDto {
 
     }
 
-    public UserDto(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
+    public UserDto(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password,  Date dateCreated) {
         this.idUser = idUser;
         this.civilities = civilities;
         this.lastname = lastname;
@@ -82,6 +78,7 @@ public class UserDto {
         this.phoneNumber = phoneNumber;
         this.connexionLogin = connexionLogin;
         this.password = password;
+        this.dateCreated = dateCreated;
     }
 
     //getter & setters
