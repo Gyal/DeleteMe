@@ -1,8 +1,9 @@
 package fr.iut.montreuil.lpcsid.controller;
 
+import fr.iut.montreuil.lpcsid.dto.UserDto;
 import fr.iut.montreuil.lpcsid.entity.UserEntity;
 import fr.iut.montreuil.lpcsid.service.UserService;
-import org.apache.catalina.mapper.Mapper;
+import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
+import java.util.List;
+
+import static org.hibernate.validator.internal.util.CollectionHelper.newArrayList;
 
 /**
  * Created on 07/03/2015.
@@ -36,10 +40,12 @@ public class UserController {
 
     // GET /customers: Récupération de la liste des utilisateurs
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
-    public  @ResponseBody Iterable<UserEntity> list(){
-        final Iterable<UserEntity> userEntities = this.userService.getAllUsers();
+    public  @ResponseBody Iterable<UserDto> list(){
+        Iterable<UserEntity> userEntities = this.userService.getAllUsers();
         LOGGER.info("List user is {}", userEntities);
-        return userEntities;
+        List<UserDto> userDtos = newArrayList();
+        mapper.map(userEntities, userDtos);
+        return userDtos;
     }
 
 
