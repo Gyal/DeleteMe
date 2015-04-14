@@ -2,6 +2,7 @@ package fr.iut.montreuil.lpcsid.controller;
 
 import fr.iut.montreuil.lpcsid.entity.UserEntity;
 import fr.iut.montreuil.lpcsid.service.UserService;
+import org.apache.catalina.mapper.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,6 +30,9 @@ public class UserController {
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private Mapper mapper;
 
     // GET /customers: Récupération de la liste des utilisateurs
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
