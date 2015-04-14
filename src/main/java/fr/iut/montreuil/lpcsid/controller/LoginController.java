@@ -30,13 +30,14 @@ public class LoginController {
         LOGGER.info("Password {}", password);
         LOGGER.info("Login {}", login);
 
+
         Boolean connect = false;
         UserEntity userConnexion = null;
         Iterable<UserEntity> users = userService.getAllUsers();
 
 
         for (UserEntity user : users) {
-            //  LOGGER.info("login {}", user.getConnexionLogin().toString());
+            //  LOGGER.info("login {}", user.getConnexionLogin().toString())test;
             if (user.getConnexionLogin().equals(login)) {
 
                 LOGGER.info("un user trouver avec le login {}", login);
