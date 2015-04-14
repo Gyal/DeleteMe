@@ -1,12 +1,12 @@
 (function(){
-    var CustomerCtrl = function($scope, customerService) {
+    var UserCtrl = function($scope, userService) {
 
-        customerService.query(function(response) {
-            $scope.customers = response || [];
+        userService.query(function(response) {
+            $scope.users = response || [];
         });
 
     };
 
-    CustomerCtrl.$inject = ['$scope', 'customerService'];
-    angular.module("deleteMeApp.controllers").controller("CustomerCtrl", CustomerCtrl);
+    UserCtrl.$inject = ['$scope', 'userService'];
+    angular.module("deleteMeApp.controllers").controller("UserCtrl", UserCtrl);
 }(angular));

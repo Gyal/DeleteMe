@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="fr" ng-app="deleteMeApp">
+<html lang="fr">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -10,7 +10,7 @@
     </link>
 </head>
 
-<body>
+<body  ng-app="deleteMeApp">
 
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -24,11 +24,11 @@
 <h3>Page d'accueil </h3>
 
 
-    <div class="container-fluid" ng-controller="CustomerCtrl">
+    <div class="container-fluid" ng-controller="UserCtrl">
 
 
 
-            <div id="customerList">
+            <div id="userList">
                 <h2> Liste des utilisateurs</h2>
 
                 <table class="table table-striped">
@@ -41,11 +41,11 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="customer in customers | filter:query">
-                        <td>{{ customer.idCustomer }}</td>
-                        <td>{{ customer.lastname }}</td>
-                        <td>{{ customer.firstName }}</td>
-                        <td>{{ customer.dateCreated | date:"MM/dd/yyyy"}}</td>
+                    <tr ng-repeat="user in users | filter:query">
+                        <td>{{ user.idUser }}</td>
+                        <td>{{ user.lastname }}</td>
+                        <td>{{ user.firstName }}</td>
+                        <td>{{ user.dateCreated | date:"MM/dd/yyyy"}}</td>
 
 
                     </tr>

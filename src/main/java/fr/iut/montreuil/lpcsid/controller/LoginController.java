@@ -1,14 +1,14 @@
 package fr.iut.montreuil.lpcsid.controller;
 
-import fr.iut.montreuil.lpcsid.entity.CustomerEntity;
-import fr.iut.montreuil.lpcsid.service.CustomerService;
+import fr.iut.montreuil.lpcsid.entity.UserEntity;
+import fr.iut.montreuil.lpcsid.service.UserService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by Mélina on 09/04/2015.
+ * Created by on 09/04/2015.
  */
 @RestController
 @RequestMapping("api/connexion")
@@ -17,7 +17,7 @@ public class LoginController {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
-    private CustomerService customerService;
+    private UserService userService;
 
     @RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json")
     public
@@ -30,24 +30,25 @@ public class LoginController {
         LOGGER.info("Password {}", password);
         LOGGER.info("Login {}", login);
 
+
         Boolean connect = false;
-        CustomerEntity userConnexion = null;
-        Iterable<CustomerEntity> customers = customerService.getAllCustomers();
+        UserEntity userConnexion = null;
+        Iterable<UserEntity> users = userService.getAllUsers();
 
 
-        for (CustomerEntity customer : customers) {
-            //  LOGGER.info("login {}", customer.getConnexionLogin().toString());
-            if (customer.getConnexionLogin().equals(login)) {
+        for (UserEntity user : users) {
+            //  LOGGER.info("login {}", user.getConnexionLogin().toString())test;
+            if (user.getConnexionLogin().equals(login)) {
 
                 LOGGER.info("un user trouver avec le login {}", login);
-                LOGGER.info("son id est {}", customer.getIdCustomer());
+                LOGGER.info("son id est {}", user.getIdUser());
 
-                if (customer.getPassword().equals(password)) {
+                if (user.getPassword().equals(password)) {
                     LOGGER.info("un user trouver avec le password{}", password);
-                    LOGGER.info("son id est {}", customer.getIdCustomer());
+                    LOGGER.info("son id est {}", user.getIdUser());
                     connect = true;
-                    Long idCustomReturn = customer.getIdCustomer();
-                    userConnexion = customerService.getCustomerById(idCustomReturn);
+                    Long idCustomReturn = user.getIdUser();
+                    userConnexion = userService.getUserById(idCustomReturn);
                     LOGGER.info("Connecté {}", connect);
                 } else {
                     LOGGER.info("Pas connecté {}", connect);
