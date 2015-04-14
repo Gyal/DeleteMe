@@ -1,74 +1,57 @@
-package fr.iut.montreuil.lpcsid.entity;
+package fr.iut.montreuil.lpcsid.dto;
 
-import javax.persistence.*;
-import java.io.Serializable;
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.util.Date;
 
 /**
- * Created on  20/03/2015.
+ * Created by youniik-nana on 14/04/15.
  */
-
-@Entity
-@Table(name = "user")
-public class UserEntity implements Serializable {
+public class UserDto {
 
     //Variables
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "user_id")
     private Long idUser;
 
-    @Column(nullable = false)
     private String civilities;
 
-    @Column(nullable = false)
     private String lastname;
 
-    @Column(nullable = false)
     private String firstName;
 
-    @Column(nullable = false)
     private String dateOfBirth;
 
-    @Column(nullable = false)
     private String street;
 
-    @Column(nullable = false)
     private String city;
 
-    @Column(nullable = false)
     private String country;
 
-    @Column(nullable = false)
     private String zipCode;
 
-    @Column(nullable = false)
     private String mail;
 
-    @Column(nullable = false)
     private String phoneNumber;
 
-    @Column(nullable = false)
     private String connexionLogin;
 
-    @Column(nullable = false)
     private String password;
 
-    @Column(nullable = false)
     private Date dateCreated;
 
 
-    public UserEntity(){
+    public UserDto(){
 
     }
 
-    public static UserEntity newUserEntity(){
-        return newUserEntity();
+    public static UserDto newUserDto(){
+        return newUserDto();
     }
 
     // Par l'utilisateur
 
-    public UserEntity(String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password, Date dateCreated) {
+    public UserDto(String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password, Date dateCreated) {
         this.civilities = civilities;
         this.lastname = lastname;
         this.firstName = firstName;
@@ -85,7 +68,7 @@ public class UserEntity implements Serializable {
 
     }
 
-    public UserEntity(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
+    public UserDto(Long idUser, String civilities, String lastname, String firstName, String dateOfBirth, String street, String city, String country, String zipCode, String mail, String phoneNumber, String connexionLogin, String password) {
         this.idUser = idUser;
         this.civilities = civilities;
         this.lastname = lastname;
@@ -212,5 +195,5 @@ public class UserEntity implements Serializable {
         this.dateCreated = dateCreated;
     }
 
-}
 
+}
