@@ -94,7 +94,7 @@ public class UserDtoTest {
     }
     @Test
     public void testDtoOnPojo() throws Exception {
-        Long idUser = 1L;
+        Long idUser = 2L;
         String civility = "Mme";
         String lastname = "MER";
 
