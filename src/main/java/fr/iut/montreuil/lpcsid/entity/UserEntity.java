@@ -62,6 +62,7 @@ public class UserEntity implements Serializable {
     @Column(nullable = false)
     private Date dateCreated;
 
+
     public UserEntity(){}
 }
 

@@ -53,6 +53,7 @@ public class UserController {
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json" )
     public @ResponseBody
     List<UserDto> getById(@PathVariable long id){
+
         UserEntity userEntity = userService.getUserById(id);
         List<UserDto> userDtos = newArrayList();
         mapper.map(userEntity, userDtos);
