@@ -42,9 +42,9 @@ public class UserController {
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
     public  @ResponseBody Iterable<UserDto> list(){
         Iterable<UserEntity> userEntities = this.userService.getAllUsers();
-        LOGGER.info("List user is {}", userEntities);
         List<UserDto> userDtos = newArrayList();
         mapper.map(userEntities, userDtos);
+        LOGGER.info("List user is {}", userDtos);
         return userDtos;
     }
 
@@ -52,10 +52,12 @@ public class UserController {
     // GET /accountId : Récupération d'un compte par son ID
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json" )
     public @ResponseBody
-    UserEntity getById(@PathVariable long id){
+    List<UserDto> getById(@PathVariable long id){
         UserEntity userEntity = userService.getUserById(id);
-        LOGGER.info("user id is {}, return.", userEntity);
-        return userEntity;
+        List<UserDto> userDtos = newArrayList();
+        mapper.map(userEntity, userDtos);
+        LOGGER.info("user id is {}, return.", userDtos);
+        return userDtos;
     }
 
     // POST/{id}: crée un compte pour le client
@@ -64,9 +66,8 @@ public class UserController {
     public UserEntity createUser(@RequestParam(value = "userCiv", required = false) String userCiv, @RequestParam(value = "userLastName", required = true) String userLastName, @RequestParam(value = "userFirstName", required = true) String userFirstName, @RequestParam(value = "userLogin", required = true) String userLogin, @RequestParam(value = "userPassword", required = true) String userPassword, @RequestParam(value = "userDateBirth", required = true) String userDateBirth, @RequestParam(value = "userMail", required = true) String userMail, @RequestParam(value = "userPhone", required = true) String userPhone, @RequestParam(value = "userAdresse", required = true) String userAdresse, @RequestParam(value = "userVille", required = true) String userVille, @RequestParam(value = "userPays", required = true) String userPays, @RequestParam(value = "userCP", required = true) String userCP) {
 
         Date userDate = new Date();
-        UserEntity userEntity = new UserEntity(userCiv, userLastName, userFirstName, userDateBirth, userAdresse, userVille, userPays, userCP, userMail, userPhone, userLogin, userPassword, userDate);
+        UserEntity userEntity = new UserEntity(null,userCiv, userLastName, userFirstName, userDateBirth, userAdresse, userVille, userPays, userCP, userMail, userPhone, userLogin, userPassword, userDate);
         LOGGER.info("user Creating id is{}, persisting.", userEntity.getIdUser());
-
         userService.saveUser(userEntity);
         return userEntity;
     }
