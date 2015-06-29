@@ -22,7 +22,7 @@ import static org.hamcrest.core.IsNull.notNullValue;
 /**
  * UserDto Tester.
  *
- * @author <Authors name>
+ * @author <Authors name >
  * @version 1.0
  * @since <pre>avr. 14, 2015</pre>
  */
@@ -31,7 +31,6 @@ import static org.hamcrest.core.IsNull.notNullValue;
 public class UserDtoTest {
     @Autowired
     Mapper mapper;
-    UserService userService;
 
     @Before
     public void before() throws Exception {

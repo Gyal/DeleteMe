@@ -16,7 +16,7 @@ import java.util.List;
 import static org.hibernate.validator.internal.util.CollectionHelper.newArrayList;
 
 /**
- * Created on 07/03/2015.
+ * Created by juliana on 07/03/2015.
  */
 
 @RestController
@@ -30,8 +30,8 @@ ce qui signifie qu'il ya moins d'écrire puisque depuis un service Web RESTFUL n
 @RequestMapping("api/user")
 public class UserController {
 
-
     private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
@@ -41,24 +41,15 @@ public class UserController {
     // GET /customers: Récupération de la liste des utilisateurs
     @RequestMapping(value = "/list", method = RequestMethod.GET, produces = "application/json")
     public  @ResponseBody Iterable<UserDto> list(){
-        Iterable<UserEntity> userEntities = this.userService.getAllUsers();
-        List<UserDto> userDtos = newArrayList();
-        mapper.map(userEntities, userDtos);
-        LOGGER.info("List user is {}", userDtos);
-        return userDtos;
+        return userService.findAll();
     }
 
 
     // GET /accountId : Récupération d'un compte par son ID
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json" )
     public @ResponseBody
-    List<UserDto> getById(@PathVariable long id){
-
-        UserEntity userEntity = userService.getUserById(id);
-        List<UserDto> userDtos = newArrayList();
-        mapper.map(userEntity, userDtos);
-        LOGGER.info("user id is {}, return.", userDtos);
-        return userDtos;
+    UserDto getById(@PathVariable long id){
+        return userService.getUserById(id);
     }
 
     // POST/{id}: crée un compte pour le client
@@ -72,22 +63,7 @@ public class UserController {
         userService.saveUser(userEntity);
         return userEntity;
     }
-    /*CustomerDto customerDto = mapper.map(customerEntity, CustomerDto.class);
 
-  CustomerEntity savedCustomer;
-
-
-
-
-  try {
-      //savedCustomer = customerService.saveCustomer(customerEntity);
-      LOGGER.info("Customer Creating id is{}, persisting.", customerEntity.getIdCustomer());
-  } catch (DataIntegrityViolationException e) {
-      throw new DataIntegrityException(WRONG_ENTITY_INFORMATION);
-  }
-  return mapper.map(savedCustomer, CustomerDto.class);
-}
-*/
     // Supression d'un utilisateur
     @RequestMapping(value = "/{customer-id", method = RequestMethod.DELETE)
     @ResponseStatus(HttpStatus.NO_CONTENT)

@@ -42,9 +42,5 @@ public class UserDto {
 
     private Date dateCreated;
 
-    public UserDto(){
-
-    }
-
-
+    public UserDto (){}
 }

@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 /**
- * Created on  20/03/2015.
+ * Created by juliana on  20/03/2015.
  */
 
 @Entity
@@ -64,5 +64,8 @@ public class UserEntity implements Serializable {
 
 
     public UserEntity(){}
+
+    public UserEntity(Object o, String userCiv, String userLastName, String userFirstName, String userDateBirth, String userAdresse, String userVille, String userPays, String userCP, String userMail, String userPhone, String userLogin, String userPassword, Date userDate){
+    }
 }
 
