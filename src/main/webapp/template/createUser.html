@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html lang="fr" ng-app="deleteMeApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>DeleteMe Application</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <link href="css/style.css" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="http://localhost:8080/">Accueil</a></li>
+        </ul>
+    </div>
+</nav>
+<center>
+<form class="form-inline jal" action="http://localhost:8080/api/user/new" method="POST">
+
+    <div class="well">
+        <h2> Création d'un utilisateur </h2>
+
+        <div class="control-group">
+            <label class="control-label">Civilité</label>
+
+            <div class="controls">
+                <select name="userCiv" id="userCiv" name="userCiv" placeholder="Mr/Mme" >
+                    <option value="Mme">Mme</option>
+                    <option value ="Mr">Mr</option>
+                </select>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Nom</label>
+
+            <div class="controls">
+                <input id="userLastName" type="text" name="userLastName" placeholder="Nom" required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Prénom</label>
+
+            <div class="controls">
+                <input id="userFirstName" type="text" name="userFirstName" placeholder="Prénom" required/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Login</label>
+
+            <div class="controls">
+                <input id="userLogin" type="text" name="userLogin" placeholder="Login" required/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Password</label>
+
+            <div class="controls">
+                <input id="userPassword" type="text" name="userPassword" placeholder="Password" required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Date de naissance</label>
+
+            <div class="controls">
+                <input id="userDateBirth" type="text" name="userDateBirth" placeholder="Date de naissance" required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Mail</label>
+
+            <div class="controls">
+                <input id="userMail" type="text" name="userMail" placeholder="Mail"required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Numéro de telephone</label>
+
+            <div class="controls">
+                <input id="userPhone" type="text" name="userPhone" placeholder="Numéro de telephone" required pattern="[0-9]{10}"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Adresse</label>
+
+            <div class="controls">
+                <input id="userAdresse" type="text" name="userAdresse" placeholder="Adresse" required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Ville</label>
+
+            <div class="controls">
+                <input id="userVille" type="text" name="userVille" placeholder="Ville" required/>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label">Code postal</label>
+
+            <div class="controls">
+                <input id="userCP" type="text" name="userCP" placeholder="Code postal" required/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label">Pays</label>
+
+            <div class="controls">
+                <input id="userPays" type="text" name="userPays" placeholder="Pays" required/>
+            </div>
+        </div>
+
+        <hr class="soft"/>
+        <div class="controls">
+            <button type="submit" class="btn btn-warning">Enregistrer</button>
+            <button type="reset" class="btn btn-primary">Annuler</button>
+        </div>
+    </div>
+</form>
+</center>
+</body>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-resource.min.js"></script>
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<script src="js/app/application.js"></script>
+<script src="js/app/controllers.js"></script>
+<script src="js/app/services.js"></script>
+
+
+
+</html>

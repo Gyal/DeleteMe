@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="fr" ng-app="deleteMeApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>DeleteMe Application</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </link>
+    <link href="css/style.css" rel="stylesheet">
+    </link>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="http://localhost:8080/">Accueil</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="wrapper">
+    <center>
+        <form class="form-signin well" action="http://localhost:8080/api/connexion/" method="POST">
+            <center>
+                <h2> Connexion</h2>
+            </center>
+            <div style="margin-bottom: 25px" class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                <input id="connexionLogin" type="text" class="form-control" name="connexionLogin"
+                       placeholder="Identifiant">
+            </div>
+
+            <div style="margin-bottom: 25px" class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                <input id="password" type="password" class="form-control" name="password" placeholder="Mot de passe">
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">S'identifier</button>
+
+        </form>
+    </center>
+</div>
+</body>
+<script src="angular/angular.min.js"></script>
+<script src="angular/angular-resource.min.js"></script>
+<script src="bootstrap/js/jquery.min.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+
+<script src="js/app/application.js"></script>
+<script src="js/app/controllers.js"></script>
+<script src="js/app/services.js"></script>
+
+
+</html>
