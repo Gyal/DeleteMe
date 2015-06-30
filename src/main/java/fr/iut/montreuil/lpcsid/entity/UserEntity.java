@@ -62,7 +62,6 @@ public class UserEntity implements Serializable {
     @Column(nullable = false)
     private Date dateCreated;
 
-
     public UserEntity(){}
 
     public UserEntity(Object o, String userCiv, String userLastName, String userFirstName, String userDateBirth, String userAdresse, String userVille, String userPays, String userCP, String userMail, String userPhone, String userLogin, String userPassword, Date userDate){

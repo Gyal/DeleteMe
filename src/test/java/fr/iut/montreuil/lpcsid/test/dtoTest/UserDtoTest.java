@@ -46,27 +46,16 @@ public class UserDtoTest {
         Long idUser = 1L;
         String civility = "Mme";
         String lastname = "MER";
-
         String firstName = "MER";
-
         String dateOfBirth = " 000000";
-
         String street = "MERStreet";
-
         String city = "MERCity";
-
         String country = "MERCountry";
-
         String zipCode = "MERCP";
-
         String mail = "MERMail@";
-
         String phoneNumber = "MERTel0000";
-
         String connexionLogin = "mel";
-
         String password = "mel";
-
         Date dateCreated = new Date();
 
         UserEntity userEntity = new UserEntity(idUser, civility, lastname, firstName, dateOfBirth, street, city, country, zipCode, mail, phoneNumber, connexionLogin, password, dateCreated);
