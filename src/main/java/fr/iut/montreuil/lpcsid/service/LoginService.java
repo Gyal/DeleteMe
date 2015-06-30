@@ -6,30 +6,26 @@ import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.transaction.Transactional;
-import java.util.Date;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
- * Created by juliana on 12/04/15.
+ * Created by Mélina on 30/06/2015.
  */
 @Service
 @Transactional
-@Component
 public class LoginService {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginService.class);
 
+    @Autowired
+    private UserService userService;
     @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private Mapper mapper;
 
-    public String userConnexion( String connexionLogin, String connexionPassword) {
+    public Long userConnexion(String connexionLogin, String connexionPassword) {
 
         String login = connexionLogin;
         String password = connexionPassword;
@@ -38,27 +34,28 @@ public class LoginService {
         LOGGER.info("Login {}", login);
 
         Boolean connect = false;
-        UserEntity customerConnexion = null;
+        UserEntity userConnexion = null;
         UserEntity customer = userRepository.findByconnexionLogin(login);
+        //  LOGGER.info("login {}", customer.getConnexionLogin().toString());
         if (customer != null) {
-            LOGGER.info("un customer trouver avec le login {}", login);
+            LOGGER.info("un user trouver avec le login {}", login);
             LOGGER.info("son id est {}", customer.getIdUser());
 
             if (customer.getPassword().equals(password)) {
-                LOGGER.info("un customer trouver avec le password{}", password);
+                LOGGER.info("un user trouver avec le password{}", password);
                 LOGGER.info("son id est {}", customer.getIdUser());
                 connect = true;
                 Long idCustomReturn = customer.getIdUser();
-                customerConnexion = userRepository.findOne(idCustomReturn);
+                userConnexion = userRepository.findOne(idCustomReturn);
                 LOGGER.info("Connecté {}", connect);
             } else {
                 LOGGER.info("Pas connecté {}", connect);
             }
-            return "Vous êtes bien connecté";
         }else {
-            LOGGER.info("aucun customer avec ce login {}", login);
-            LOGGER.info("Pas connecté, le Password ou MDP est erroné {}", connect);
-            return "La connexion à échoué vérifier votre identifiant et mot de passe";
+            LOGGER.info("aucun user avec ce login {}", login);
         }
+
+        return userConnexion.getIdUser();
     }
+
 }

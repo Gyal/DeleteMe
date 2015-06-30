@@ -19,9 +19,7 @@ public class LoginController {
     private LoginService loginService;
 
     @RequestMapping(value = "/", method = RequestMethod.POST, produces = "application/json")
-    public
-    @ResponseBody
-    String userConnexion(@RequestParam(value = "connexionLogin", required = false) String connexionLogin, @RequestParam(value = "password", required = false) String connexionPassword) {
+    public @ResponseBody Long userConnexion(@RequestParam(value = "connexionLogin", required = true) String connexionLogin, @RequestParam(value = "connexionPassword", required = true) String connexionPassword) {
         return loginService.userConnexion(connexionLogin,connexionPassword);
     }
 

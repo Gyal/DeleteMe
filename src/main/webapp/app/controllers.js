@@ -1,12 +1,19 @@
-(function(){
-    var UserCtrl = function($scope, userService) {
+angular.module("deleteMeApp.controllers", ['ngCookies'])
 
-        userService.query(function(response) {
-            $scope.users = response || [];
-        });
+    .controller('LoginCtrl', function ($scope, loginService) {
+        $scope.connexionLogin = "test";
+        $scope.connexionPassword = "test";
 
-    };
+        $scope.login = function () {
+            loginService.login($scope.connexionLogin, $scope.connexionPassword, function (response) {
 
-    UserCtrl.$inject = ['$scope', 'userService'];
-    angular.module("deleteMeApp.controllers").controller("UserCtrl", UserCtrl);
-}(angular));
+                $scope.user = response || [];
+            });
+        }
+        $scope.logOut = function () {
+            loginService.logOut();
+        }
+
+    })
+
+
