@@ -29,27 +29,10 @@ public class BillEntity {
     @Column(nullable = false)
     private double discount;
 
-    @Column(nullable = false)
-    @OneToOne
-    private Long userId;
-
-    @Column(nullable = false)
-    @OneToOne
-    private Long requestId;
-
-    @Column(nullable = false)
-    @OneToOne
-    private Long paymentId;
+    @ManyToOne
+    private PaymentEntity paymentEntity;
 
     public BillEntity(){}
 
-    public BillEntity(Long idBill, double amount, double taxe, double discount, Long userId, Long requestId, Long paymentId) {
-        this.idBill = idBill;
-        this.amount = amount;
-        this.taxe = taxe;
-        this.discount = discount;
-        this.userId = userId;
-        this.requestId = requestId;
-        this.paymentId = paymentId;
-    }
+
 }

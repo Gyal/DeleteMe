@@ -33,23 +33,13 @@ public class RequestEntity {
     @Column(nullable = false)
     private String type;
 
-    @Column(nullable = false)
-    @OneToOne
-    private long UserId;
 
-    @Column(nullable = false)
-    @OneToOne
-    private long WebsiteId;
+    @ManyToOne
+    private UserEntity userEntity;
+
+    @ManyToOne
+    private WebsiteEntity websiteEntity;
 
     public RequestEntity(){}
 
-    public RequestEntity(Long idRequest, Date date, String link, String reason, String type, long userId, long websiteId) {
-        this.idRequest = idRequest;
-        this.date = date;
-        this.link = link;
-        this.reason = reason;
-        this.type = type;
-        UserId = userId;
-        WebsiteId = websiteId;
-    }
 }

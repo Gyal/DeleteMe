@@ -34,23 +34,9 @@ public class PaymentEntity {
     @Column(nullable = false)
     private double discount;
 
-    @Column(nullable = false)
-    @OneToOne
-    private long UserId;
-
-    @Column(nullable = false)
-    @OneToOne
-    private long requestId;
+    @ManyToOne
+    private RequestEntity requestEntity;
 
     public PaymentEntity(){}
 
-    public PaymentEntity(Long idPayment, String status, double amount, Date date, double discount, long userId, long requestId) {
-        this.idPayment = idPayment;
-        this.status = status;
-        this.amount = amount;
-        this.date = date;
-        this.discount = discount;
-        UserId = userId;
-        this.requestId = requestId;
-    }
 }

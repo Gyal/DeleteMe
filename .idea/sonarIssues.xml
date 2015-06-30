@@ -8,27 +8,22 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/dto/BillDto.java">
+        <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/dto/PaymentDto.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/controller/LoginController.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/dto/RequestDto.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/controller/MailSubmissionController.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/dto/UserDto.java">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/dto/WebsiteDto.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/controller/RootController.java">
           <value>
             <set />
           </value>
@@ -48,42 +43,37 @@
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/entity/UserEntity.java">
-          <value>
-            <set />
-          </value>
-        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/entity/WebsiteEntity.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/repository/BillRepository.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/service/LoginService.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/repository/PaymentRepository.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/service/MailConfiguration.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/repository/RequestRepository.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/service/MailProperties.java">
           <value>
             <set />
           </value>
         </entry>
-        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/repository/WebsiteRepository.java">
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/service/SmtpMailSender.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/resources/application.properties">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/application.yml">
-          <value>
-            <set />
-          </value>
-        </entry>
-        <entry key="$PROJECT_DIR$/src/test/java/fr/iut/montreuil/lpcsid/test/dtoTest/UserDtoTest.java">
           <value>
             <set />
           </value>
