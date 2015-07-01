@@ -223,6 +223,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/template/profileAdmin.html">
+          <value>
+            <set />
+          </value>
+        </entry>
       </map>
     </option>
   </component>
