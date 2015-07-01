@@ -41,7 +41,6 @@
 
 #wrapper.toggled #page-content-wrapper {
     position: absolute;
-
 }
 
 /* Sidebar Styles */
@@ -111,8 +110,8 @@
 
     #page-content-wrapper {
         width: 100%;
-        padding-left: 200px;
         padding-right: 50px;
+        text-align:center;
       ;
     }
 
