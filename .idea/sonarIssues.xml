@@ -193,6 +193,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/template/contact.html">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/template/createUser.html">
           <value>
             <set />
@@ -224,6 +229,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/template/profileAdmin.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/template/profileUser.html">
           <value>
             <set />
           </value>
