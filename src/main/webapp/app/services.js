@@ -38,7 +38,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
     })
     .factory('userService', function ($http) {
 
-        var createUser = function (userCiv, userLastName, userFirstName, userFirstName, userLogin, userPassword, userDateBirth, userMail, userPhone, userAdresse, userVille, userCP, userPays) {
+        var createUser = function (userCiv,userLastName,userFirstName,userDateBirth,userAdresse,userVille,userPays,userCP,userMail,userPhone,userLogin,userPassword) {
             var req = {
                 method: 'POST',
                 url: '/api/user/new',
@@ -49,18 +49,17 @@ angular.module('deleteMeApp.services', ['ngCookies'])
                     "userCiv": userCiv,
                     "userLastName": userLastName,
                     "userFirstName": userFirstName,
-                    'userLogin': userLogin,
-                    'userPassword': userPassword,
                     'userDateBirth': userDateBirth,
-                    'userMail': userMail,
-                    'userPhone': userPhone,
                     'userAdresse': userAdresse,
                     'userVille': userVille,
+                    'userPays': userPays,
                     'userCP': userCP,
-                    'userPays': userPays
+                    'userMail': userMail,
+                    'userPhone': userPhone,
+                    'userLogin': userLogin,
+                    'userPassword': userPassword
 
-
-                }
+        }
             };
             $http(req).success(function () {
 
