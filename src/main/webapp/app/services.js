@@ -20,7 +20,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
 
                 // Transfert de l'id de l'utilisateur par cookie
                 $cookieStore.put('JSESSIONID', data);
-                $location.path('/account/' + data);
+                $location.path('/api/profile/:id' + data);
 
             });
         };
@@ -36,7 +36,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
         };
 
     })
-    .factory('userService', function ($http) {
+    .factory('userService', function ($http, $location) {
 
         var createUser = function (userCiv,userLastName,userFirstName,userDateBirth,userAdresse,userVille,userPays,userCP,userMail,userPhone,userLogin,userPassword) {
             var req = {
@@ -65,7 +65,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
 
                 // Transfert de l'id de l'utilisateur par cookie
                 alert("OK crée")
-
+                $location.path('/api/user/new');
             });
         };
 
