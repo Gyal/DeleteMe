@@ -10,7 +10,6 @@
     width: 550px;
 }
    body{
-        padding-top:30px;
         padding-bottom : 40px;
         padding-left:15px;
         }
@@ -59,10 +58,6 @@
    }
    .block{
        height:200px;
-   }
-
-   #page{
-       margin-top: 50px;
    }
 
    body {
