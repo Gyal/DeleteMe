@@ -11,9 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Date;
-import java.util.List;
-
-import static org.hibernate.validator.internal.util.CollectionHelper.newArrayList;
 
 /**
  * Created by juliana on 07/03/2015.
@@ -55,7 +52,21 @@ public class UserController {
     // POST/{id}: crée un compte pour le client
     @RequestMapping(value = "/new", method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public UserEntity createUser(@RequestParam(value = "userCiv", required = false) String userCiv, @RequestParam(value = "userLastName", required = true) String userLastName, @RequestParam(value = "userFirstName", required = true) String userFirstName, @RequestParam(value = "userLogin", required = true) String userLogin, @RequestParam(value = "userPassword", required = true) String userPassword, @RequestParam(value = "userDateBirth", required = true) String userDateBirth, @RequestParam(value = "userMail", required = true) String userMail, @RequestParam(value = "userPhone", required = true) String userPhone, @RequestParam(value = "userAdresse", required = true) String userAdresse, @RequestParam(value = "userVille", required = true) String userVille, @RequestParam(value = "userPays", required = true) String userPays, @RequestParam(value = "userCP", required = true) String userCP) {
+    public UserEntity createUser(
+            @RequestParam(value = "userCiv", required = false) String userCiv,
+            @RequestParam(value = "userLastName", required = true) String userLastName,
+            @RequestParam(value = "userFirstName", required = true) String userFirstName,
+            @RequestParam(value = "userDateBirth")String userDateBirth,
+            @RequestParam(value = "userAdresse", required = true) String userAdresse,
+            @RequestParam(value = "userVille", required = true) String userVille,
+            @RequestParam(value = "userPays", required = true) String userPays,
+            @RequestParam(value = "userCP", required = true) String userCP,
+            @RequestParam(value = "userMail", required = true) String userMail,
+            @RequestParam(value = "userPhone", required = true) String userPhone,
+            @RequestParam(value = "userLogin", required = true) String userLogin,
+            @RequestParam(value = "userPassword", required = true) String userPassword
+          )
+  {
 
         Date userDate = new Date();
         UserEntity userEntity = new UserEntity(null,userCiv, userLastName, userFirstName, userDateBirth, userAdresse, userVille, userPays, userCP, userMail, userPhone, userLogin, userPassword, userDate);
