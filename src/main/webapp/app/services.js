@@ -38,7 +38,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
     })
     .factory('userService', function ($http, $location) {
 
-        var createUser = function (userCiv,userLastName,userFirstName,userDateBirth,userAdresse,userVille,userPays,userCP,userMail,userPhone,userLogin,userPassword) {
+        var createUser = function (userCiv, userLastName, userFirstName, userDateBirth, userAdresse, userVille, userPays, userCP, userMail, userPhone, userLogin, userPassword) {
             var req = {
                 method: 'POST',
                 url: '/api/user/new',
@@ -59,7 +59,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
                     'userLogin': userLogin,
                     'userPassword': userPassword
 
-        }
+                }
             };
             $http(req).success(function () {
 
@@ -77,7 +77,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
     })
     .factory('deleteRequestService', function ($http, $cookieStore, $resource) {
         var idUser = $cookieStore.get('JSESSIONID');
-        var deleteRequest = function (emailFrom,objectReq, commentReq, linkReq) {
+        var deleteRequest = function (emailFrom, objectReq, commentReq, linkReq) {
             var req = {
                 method: 'POST',
                 url: 'api/deleteRequest/',
@@ -85,7 +85,7 @@ angular.module('deleteMeApp.services', ['ngCookies'])
                     'Content-Type': 'charset=UTF-8'
                 },
                 params: {
-                    "emailFrom":emailFrom,
+                    "emailFrom": emailFrom,
                     "objectReq": objectReq,
                     "commentReq": commentReq,
                     "linkReq": linkReq
@@ -101,29 +101,35 @@ angular.module('deleteMeApp.services', ['ngCookies'])
         return {
             // si pas return de login : la requete ne se sera exécuté en GET
             deleteRequest: deleteRequest,
-            requestUserListRessource: $resource('api/deleteRequest/'+idUser)
+            requestUserListRessource: $resource('api/deleteRequest/' + idUser)
         };
 
     })
 
-.factory('searchService', function ($http, $resource){
-  var searchRequest = function () {
-  alert("in shezrhs");
-  var req = {
+    .factory('searchService', function ($http ) {
+        var searchRequest = function () {
+            alert("in shezrhs");
+
+            var req = {
                 method: 'GET',
-                url: "http://api.duckduckgo.com/?q=DuckDuckGo&format=json",
+                url: "http://api.duckduckgo.com/?q=test&format=json",
+               // url:"https://www.google.fr/search?q=test&format=json",
                 headers: {
-                    'Content-Type':'application/x-www-form-urlencoded',
-                   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*//*;//q=0.8'
-                   }
+                    'dataType': "jsonp",
+                    'Access-Control-Allow-Origin': "*",
+                    'Access-Control-Allow-Headers':" [the same ACCESS-CONTROL-REQUEST-HEADERS from request]",
+
+                'Content-Type': 'application/x-javascript',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*//*;//q=0.8'
+                }
             };
-            $http(req).success(function (data) {
-                alert("okokk");
+            $http(req).success(function (reponse) {
+                alert(  reponse.getJSON());
             });
-            };
+        };
 
         return {
-            searchRequest:searchRequest
+            searchRequest: searchRequest
         };
-   })
+    })
 

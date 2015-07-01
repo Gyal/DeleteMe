@@ -3,7 +3,13 @@
 
 (function () {
     var app = angular.module('deleteMeApp',["ngResource", "deleteMeApp.controllers", "deleteMeApp.services", "ngRoute"]);
-    app.config(function ($routeProvider) {
+
+    app.config(['$httpProvider', function($httpProvider) {
+        $httpProvider.defaults.useXDomain = true;
+        delete $httpProvider.defaults.headers.common['X-Requested-With'];
+    }
+    ]);
+        app.config(function ($routeProvider) {
         $routeProvider
             .when('/connexion', {templateUrl: '/template/connexion.html'})
             .when('/api/user/new', {templateUrl: '/template/createUser.html'})

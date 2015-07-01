@@ -17,7 +17,6 @@ angular.module("deleteMeApp.controllers", ['ngCookies'])
     })
     .controller('UserCtrl', function ($scope, userService) {
         $scope.createUser = function () {
-            alert("innn createUser");
             userService.createUser($scope.userCiv, $scope.userLastName, $scope.userFirstName, $scope.userDateBirth, $scope.userAdresse, $scope.userVille, $scope.userPays, $scope.userCP, $scope.userMail, $scope.userPhone, $scope.userLogin,$scope.userPassword, function (response) {
 
                 $scope.user = response || [];
@@ -45,9 +44,8 @@ angular.module("deleteMeApp.controllers", ['ngCookies'])
     .controller('SearchCtrl', function ($scope, searchService){
     alert ("in controller");
                  $scope.searchRequest = function () {
-                          alert("innn searchRequest");
               searchService.searchRequest(function(response){
-                $scope.test = response || [];
+                $scope.hello = response || [];
                           });
                       }
                       })

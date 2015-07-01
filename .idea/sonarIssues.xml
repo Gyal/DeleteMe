@@ -128,6 +128,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/fr/iut/montreuil/lpcsid/service/StHttpRequest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/application.properties">
           <value>
             <set />
@@ -179,6 +184,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/index.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/js/test.js">
           <value>
             <set />
           </value>
@@ -239,6 +249,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/template/service.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/template/test.html">
           <value>
             <set />
           </value>
