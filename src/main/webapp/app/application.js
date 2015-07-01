@@ -19,6 +19,8 @@
             .when('/api/deleteRequest/:id', {templateUrl: '/template/listDemandesUser.html'})
             .when('/api/profile/1', {templateUrl: '/template/profileAdmin.html'})
             .when('/api/profile/:id', {templateUrl: '/template/profileUser.html'})
+            .when('/api/service', {templateUrl: '/template/service.html'})
+            .when('/api/contact', {templateUrl: '/template/contact.html'})
 
             .otherwise({redirectTo: '/'});
     });

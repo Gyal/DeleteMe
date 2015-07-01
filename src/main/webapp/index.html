@@ -8,7 +8,6 @@
     <link href="bootstrap/css/bootstrap-theme.css" rel="stylesheet"/>
     <link href="css/simple-sidebar.css" rel="stylesheet"/>
 
-
     <link href="css/style.css" rel="stylesheet"/>
     <link href="css/jquery-ui.css" rel="stylesheet"/>
 </head>
@@ -20,7 +19,6 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="http://localhost:8080/#/account/list" style="cursor:pointer; margin-right:50px"> Accueil</a>
             </li>
-
         </ul>
         <ul ng-controller="LoginCtrl" class="nav navbar-nav navbar-right" align="right">
             <li><a style="cursor:pointer" ng-click="logOut()">Log Out</a></li>
@@ -28,7 +26,6 @@
         </ul>
     </div>
 </nav>
-
 
 <!-- Sidebar -->
 <div id="sidebar-wrapper">
@@ -39,7 +36,7 @@
             </a>
         </li>
         <li>
-            <a href="#">Mon profil</a>
+            <a href="#/api/profile/:id">Mon profil</a>
         </li>
         <li>
             <a href="#/api/deleteRequest">Demander une suppression</a>
@@ -48,13 +45,10 @@
             <a href="#/api/deleteRequest/1">Mes demandes</a>
         </li>
         <li>
-            <a href="#">Messages</a>
+            <a href="#/api/service">Services</a>
         </li>
         <li>
-            <a href="#">Services</a>
-        </li>
-        <li>
-            <a href="#">Contact</a>
+            <a href="#/api/contact">Contact</a>
         </li>
     </ul>
 </div>
