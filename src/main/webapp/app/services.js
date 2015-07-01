@@ -105,3 +105,25 @@ angular.module('deleteMeApp.services', ['ngCookies'])
         };
 
     })
+
+.factory('searchService', function ($http, $resource){
+  var searchRequest = function () {
+  alert("in shezrhs");
+  var req = {
+                method: 'GET',
+                url: "http://api.duckduckgo.com/?q=DuckDuckGo&format=json",
+                headers: {
+                    'Content-Type':'application/x-www-form-urlencoded',
+                   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*//*;//q=0.8'
+                   }
+            };
+            $http(req).success(function (data) {
+                alert("okokk");
+            });
+            };
+
+        return {
+            searchRequest:searchRequest
+        };
+   })
+

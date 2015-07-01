@@ -17,6 +17,7 @@
             .when('/api/user/new', {templateUrl: '/template/createUser.html'})
             .when('/api/deleteRequest', {templateUrl: '/template/deleteForm.html'})
             .when('/api/deleteRequest/:id', {templateUrl: '/template/listDemandesUser.html'})
+            .when('/search', {templateUrl: '/template/test.html'})
             .when('/api/profile/1', {templateUrl: '/template/profileAdmin.html'})
             .when('/api/profile/:id', {templateUrl: '/template/profileUser.html'})
             .when('/api/service', {templateUrl: '/template/service.html'})

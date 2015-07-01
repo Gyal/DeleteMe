@@ -31,7 +31,7 @@ angular.module("deleteMeApp.controllers", ['ngCookies'])
             });
         }
 
-        // Réqupération des demandes de l'user courant au lancement
+        // Récupération des demandes de l'user courant au lancement
         $scope.init = function () {
             deleteRequestService.requestUserListRessource.query(function (response) {
                 $scope.requestList = response || [];
@@ -41,5 +41,15 @@ angular.module("deleteMeApp.controllers", ['ngCookies'])
 
         $scope.init();
     })
+
+    .controller('SearchCtrl', function ($scope, searchService){
+    alert ("in controller");
+                 $scope.searchRequest = function () {
+                          alert("innn searchRequest");
+              searchService.searchRequest(function(response){
+                $scope.test = response || [];
+                          });
+                      }
+                      })
 
 
