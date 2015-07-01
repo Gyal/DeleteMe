@@ -10,4 +10,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     public UserEntity findByconnexionLogin(String login);
+    public UserEntity findBymail(String mail);
+
 }

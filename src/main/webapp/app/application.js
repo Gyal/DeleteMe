@@ -14,6 +14,10 @@
     app.config(function ($routeProvider) {
         $routeProvider
             .when('/connexion', {templateUrl: '/template/connexion.html'})
+            .when('/api/user/new', {templateUrl: '/template/createUser.html'})
+            .when('/api/deleteRequest', {templateUrl: '/template/deleteForm.html'})
+            .when('/api/deleteRequest/:id', {templateUrl: '/template/listDemandesUser.html'})
+
             .otherwise({redirectTo: '/'});
     });
     angular.module("deleteMeApp.controllers", []);

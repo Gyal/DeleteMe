@@ -42,4 +42,11 @@ public class RequestEntity {
 
     public RequestEntity(){}
 
+    public RequestEntity(Date date, String link, String reason, String type, UserEntity userEntity) {
+        this.date=date;
+        this.link=link;
+        this.reason=reason;
+        this.type=type;
+        this.userEntity=userEntity;
+    }
 }

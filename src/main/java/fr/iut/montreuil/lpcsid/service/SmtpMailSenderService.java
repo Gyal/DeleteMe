@@ -14,7 +14,7 @@ import javax.mail.internet.MimeMessage;
 @Component
 @Service
 @Transactional
-public class SmtpMailSender {
+public class SmtpMailSenderService {
 	
 	@Autowired
 	private JavaMailSender javaMailSender;
@@ -29,7 +29,8 @@ public class SmtpMailSender {
         helper.setFrom(from);											   // multipart message
 		helper.setSubject(subject);
 		helper.setTo(to);
-		helper.setText(body, true); // true indicates html
+        // use the true flag to indicate the text included is HTML
+		helper.setText("<html><body>"+body+"</body></html>", true); // true indicates html
 		// continue using helper object for more functionalities like adding attachments, etc.  
 		
 		javaMailSender.send(message);

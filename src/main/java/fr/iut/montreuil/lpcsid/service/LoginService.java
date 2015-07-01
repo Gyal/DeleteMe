@@ -6,6 +6,7 @@ import org.dozer.Mapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -13,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
  * Created by Mélina on 30/06/2015.
  */
 @Service
+@Component
 @Transactional
 public class LoginService {
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginService.class);
