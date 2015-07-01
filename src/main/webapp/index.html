@@ -15,12 +15,10 @@
 
 <body ng-app="deleteMeApp">
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div id="logo" style="float:left; margin-left:150px; margin-top:2px; margin-bottom:2px;"> <img src="images/LOGO_DeleteMe.png" alt="DeleteMe" height="52" width="52"> </div>
     <div class="container">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="http://localhost:8080/#/account/list" style="cursor:pointer; margin-right:50px"> <img src="images/LOGO_DeleteMe.png" alt="DeleteMe" height="22" width="22"> Accueil</a>
+            <li class="active"><a href="http://localhost:8080/#/account/list" style="cursor:pointer; margin-right:50px">Accueil</a>
             </li>
-
         </ul>
         <ul ng-controller="LoginCtrl" class="nav navbar-nav navbar-right" align="right">
             <li><a style="cursor:pointer" ng-click="logOut()">Log Out</a></li>
@@ -30,21 +28,57 @@
 </nav>
 
 
-<!-- Page Content -->
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+            <a href="#">
+                Start Bootstrap
+            </a>
+        </li>
+        <li>
+            <a href="#">Mon profil</a>
+        </li>
+        <li>
+            <a href="#/api/deleteRequest">Demander une suppression</a>
+        </li>
+        <li>
+            <a href="#/api/deleteRequest/1">Mes demandes</a>
+        </li>
+        <li>
+            <a href="#">Messages</a>
+        </li>
+        <li>
+            <a href="#">Services</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+    </ul>
+</div>
+<!-- /#sidebar-wrapper -->
+
+
+<!-- Menu Toggle Script -->
+
+<ul class="sidebar-nav">
+
+</ul>
+
 <div ng-view></div>
 
 <footer class="row foot">
-        <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-            <div class="container">
-                <br>
-                <p class="col-md-9 col-sm-9 col-xs-12 copyright" style="color:white">&copy; DeleteMe - 2015</p>
-                <p class="col-md-3 col-sm-3 col-xs-12 powered-by" style="color:white">By : V.Nirogeni - J.Juliana - M.Mélina</p>
-                <br>
-                <p class="col-md-9 col-sm-9 col-xs-12 copyright">.</p>
-                <p class="col-md-3 col-sm-3 col-xs-12 powered-by" style="color:white">Formation LP CSID</p>
-                .
-            </div>
-        </nav>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <br>
+            <p class="col-md-9 col-sm-9 col-xs-12 copyright" style="color:white">&copy; DeleteMe - 2015</p>
+            <p class="col-md-3 col-sm-3 col-xs-12 powered-by" style="color:white">By : V.Nirogeni - J.Juliana - M.Mélina</p>
+            <br>
+            <p class="col-md-9 col-sm-9 col-xs-12 copyright">.</p>
+            <p class="col-md-3 col-sm-3 col-xs-12 powered-by" style="color:white">Formation LP CSID</p>
+            .
+        </div>
+    </nav>
 </footer>
 
 <!-- ADDDD -->
