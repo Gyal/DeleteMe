@@ -44,16 +44,71 @@
 </html>
 -->
 
+<div id="page-wrapper"  style="margin-left:20%">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Mon compte</h1>
+        </div>
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="glyphicon glyphicon-envelope red"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">26</div>
+                            <div>Message</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir le détail</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="glyphicon glyphicon-shopping-cart"></i>
+                        </div>
+                        <div class="col-xs-9 text-right" ng-controller="DeleteRequestCtrl">
+                            <div class="huge">{{requestList.length}}</div>
+                            <div>Mes demandes</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#/api/deleteRequest/1">
+                    <div class="panel-footer">
+                        <span class="pull-left">Voir le detail</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-<div class="well" style="width:50%; margin-left:20%; margin-bottom:20%" id="page-content-wrapper">
-    <center><h2> Mon compte </h2></center>
+        </div>
+    </div>
+<div class="well" style="width:39%; margin-left:20%;" >
+    <center><h4>Gerer mon compte</h4></center>
+
     <div class="container-fluid">
 
-        <a href="http://localhost:8080/template/updateLogin.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
+        <a href="#/api/update/login"><button class="btn btn-lg btn-primary btn-block" type="submit">
             Modifier mon mot de passe</button></a>
         <br>
 
-        <a href="http://localhost:8080/template/deleteForm.html"><button class="btn btn-lg btn-primary btn-block" type="submit">
+        <a href="#/api/deleteRequest"><button class="btn btn-lg btn-primary btn-block" type="submit">
             Demande de suppression</button></a>
         <br>
 

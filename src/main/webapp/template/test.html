@@ -1,11 +1,34 @@
 <!--<div ng-controller="SearchCtrl" style="width:50%; margin-left:20%"> Test ok-->
+<div class="row" style="margin-left:20%">
+    <div class="col-lg-12">
+        <h1 class="page-header">Effectuer une recherche </h1>
+    </div>
+</div>
+<form style="margin-left:20%;float:left;margin-end:10px" class="navbar-form navbar-left " >
+    <div class="form-group">
+        <input id="inputSearch" type="search" class="input-sm form-control" placeholder="Recherche">
+        <button type="submit" class="btn btn-primary btn-sm" onclick="search(document.getElementById('inputSearch').value)"><span style="font-size:10px" class="glyphicon glyphicon-eye-open"></span> </button>
+    </div>
+</form>
+</br>
+</br>
+<p id="labelSearch"></p>
 
 
-<textarea rows="4" cols="50" id="test" style="width:100%; margin-left:20%">
-    </textarea>
+<div class="row" style="margin-left:20%; margin-top:5%">
+    <div class="col-lg-12">
+        <h1 class="page-header">Récupération d'information</h1>
+    </div>
+</div>
+<input id="example-ddg" style="width:100%; margin-left:20%;margin-end:-500%"/>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 <script src="../js/jquery.easy-autocomplete.js"></script>
 <script src="../js/test.js"></script>
-
-<<input id="example-ddg" style="width:100%; margin-left:20%"/>
-
-

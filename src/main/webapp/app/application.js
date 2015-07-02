@@ -20,8 +20,8 @@
             .when('/api/profile/:id', {templateUrl: '/template/profileUser.html'})
             .when('/api/service', {templateUrl: '/template/service.html'})
             .when('/api/contact', {templateUrl: '/template/contact.html'})
-            .when('/api/modification/user', {templateUrl: '/template/updateUser.html'})
-            .when('/api/modification/identifiant', {templateUrl:'/template/updateLogin.html'})
+            .when('/api/update/user', {templateUrl: '/template/updateUser.html'})
+            .when('/api/update/login', {templateUrl:'/template/updateLogin.html'})
            // .when('/api/search/google', {templateUrl:'/template/google-search-api.html'})
             .otherwise({redirectTo: '/'});
     });

@@ -2,7 +2,11 @@
 
 
     <div id="accountList">
-        <h2>  Liste des demandes effectuées </h2>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">  Liste des demandes effectuées </h1>
+            </div>
+        </div>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -22,7 +26,7 @@
                 <td>{{ request.date | date}}</td>
                 <td>{{ request.type }}</td>
                 <td>{{ request.link }}</td>
-                <td>{{ request.statut }}</td>
+                <td><span class="label-success label label-default">Approved</span></td>
 
             </tr>
             </tbody>

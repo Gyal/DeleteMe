@@ -103,3 +103,24 @@
    /* custom colors */
    .gs-title a { color:orange; font-weight:bold; }
    #searchcontrol a { color:orange; }
+
+.panel-green {
+
+    color: #FFF;
+    background-color: #5CB85C;
+    border-color: #5CB85C;
+
+}
+.huge {
+    font-size: 40px;
+}
+.glyphicon{
+font-size: 50px;
+}
+
+.navbar-fixed-bottom {
+    bottom: -50px;
+}
+.page-header {
+    margin: 0px 0px 20px;
+}
