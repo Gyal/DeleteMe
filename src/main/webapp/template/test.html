@@ -6,8 +6,8 @@
 </div>
 <form style="margin-left:20%;float:left;margin-end:10px" class="navbar-form navbar-left " >
     <div class="form-group">
-        <input id="inputSearch" type="search" class="input-sm form-control" placeholder="Recherche">
-        <button type="submit" class="btn btn-primary btn-sm" onclick="search(document.getElementById('inputSearch').value)"><span style="font-size:10px" class="glyphicon glyphicon-eye-open"></span> </button>
+        <input  style="height: 40px;" id="inputSearch" type="search" class="input-sm form-control" placeholder="Recherche">
+        <button type="submit" class="btn btn-primary btn-sm" onclick="search(document.getElementById('inputSearch').value)"><span style="font-size:20px" class="glyphicon glyphicon-eye-open"></span> </button>
     </div>
 </form>
 </br>
@@ -20,7 +20,12 @@
         <h1 class="page-header">Récupération d'information</h1>
     </div>
 </div>
-<input id="example-ddg" style="width:100%; margin-left:20%;margin-end:-500%"/>
+<form style="margin-left:20%;float:left;" class="navbar-form navbar-left " >
+    <div class="form-group data-live-search='true'">
+        <input  style="height: 40px; width:400px;" id="example-ddg" type="search" class="input-sm form-control" placeholder="Recherche">
+    </div>
+</form>
+
 </br>
 </br>
 </br>

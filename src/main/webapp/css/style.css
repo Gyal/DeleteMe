@@ -1,108 +1,138 @@
 
-.transfer{
+.transfer {
     width: 14%;
 }
-.test{
+
+.test {
 
 }
 
 .tab {
     width: 550px;
 }
-   body{
-        padding-bottom : 40px;
-        padding-left:15px;
-        }
-        body a {
-        color:#FF0000;
-        }
-        body a:hover{
-        color:#AFAFAF;
-        }
-        .sidebar-nav {
-        padding: 9px 0;
-        }
-        #tab_account{
-        width:50%;
 
-        }
-        .row-fluid{
-        padding-top:50px;
-        }
+body {
+    padding-bottom: 40px;
+    padding-left: 15px;
+}
 
+body a {
+    color: #FF0000;
+}
 
-   .row-centered {
-       text-align:center;
-   }
-   .col-centered {
-       display:inline-block;/*aligner les div sur une ligne*/
-       /* reset the text-align */
-       text-align:center;
-       /* inline-block space fix */
-       margin-right:4px;
-       margin-left:4px;
-   }
+body a:hover {
+    color: #AFAFAF;
+}
 
+.sidebar-nav {
+    padding: 9px 0;
+}
 
-   .col-fixed {
-       /* custom wid   th */
-       width: 320px;
-   }
-   .col-min {
-       /* custom min width */
-       min-width:320px;
-   }
-   .col-max {
-       /* custom max width */
-       max-width: 320px;
-   }
-   .block{
-       height:200px;
-   }
+#tab_account {
+    width: 50%;
 
-   body {
-       padding-top: 120px;
-       padding-left: 100px;
-   }
+}
 
-   ul.tabs li {
-       float: left;
-       width: 57px;
-       height: 45px;
-       margin: 0px 1px 0px 0px;
-       list-style-type: none;
-   }
+.row-fluid {
+    padding-top: 50px;
+}
 
-   .table {
-       border: medium solid #CFD0CF;
-       border-collapse: collapse;
+.row-centered {
+    text-align: center;
+}
 
-   }
+.col-centered {
+    display: inline-block; /*aligner les div sur une ligne*/
+    /* reset the text-align */
+    text-align: center;
+    /* inline-block space fix */
+    margin-right: 4px;
+    margin-left: 4px;
+}
 
-   .jal {
-       background-color: white;
-       width: 400px;
-       padding: 10px 5px 5px 20px;
-   }
+.col-fixed {
+    /* custom wid   th */
+    width: 320px;
+}
 
-   .indexBoxSize {
-       height: 250px;
-   }
+.col-min {
+    /* custom min width */
+    min-width: 320px;
+}
 
-   /*Formulaire google*/
+.col-max {
+    /* custom max width */
+    max-width: 320px;
+}
 
-   /* the width of the controls (keep same as gsc-results for flush look) */
-   #searchcontrol { width:600px; }
-   .gsc-control { width:600px; }
-   /* the width of the search results box; no height value = nice auto look  */
-   .gsc-results { width:600px; }
-   /* the width of the search input */
-   .gsc-input { width:20px; }
-   /* hide "powered by google" (optional) */
-   .gsc-branding { display:none; }
-   /* custom colors */
-   .gs-title a { color:orange; font-weight:bold; }
-   #searchcontrol a { color:orange; }
+.block {
+    height: 200px;
+}
+
+body {
+    padding-top: 120px;
+    padding-left: 100px;
+}
+
+ul.tabs li {
+    float: left;
+    width: 57px;
+    height: 45px;
+    margin: 0px 1px 0px 0px;
+    list-style-type: none;
+}
+
+.table {
+    border: medium solid #CFD0CF;
+    border-collapse: collapse;
+
+}
+
+.jal {
+    background-color: white;
+    width: 400px;
+    padding: 10px 5px 5px 20px;
+}
+
+.indexBoxSize {
+    height: 250px;
+}
+
+/*Formulaire google*/
+
+/* the width of the controls (keep same as gsc-results for flush look) */
+#searchcontrol {
+    width: 600px;
+}
+
+.gsc-control {
+    width: 600px;
+}
+
+/* the width of the search results box; no height value = nice auto look  */
+.gsc-results {
+    width: 600px;
+}
+
+/* the width of the search input */
+.gsc-input {
+    width: 20px;
+}
+
+/* hide "powered by google" (optional) */
+.gsc-branding {
+    display: none;
+}
+
+/* custom colors */
+.gs-title a {
+    color: orange;
+    font-weight: bold;
+}
+
+#searchcontrol a {
+    color: orange;
+}
 
 .panel-green {
 
@@ -111,16 +141,55 @@
     border-color: #5CB85C;
 
 }
+
 .huge {
     font-size: 40px;
 }
-.glyphicon{
-font-size: 50px;
+
+.glyphicon {
+    font-size: 50px;
 }
 
 .navbar-fixed-bottom {
     bottom: -50px;
 }
+
 .page-header {
     margin: 0px 0px 20px;
 }
+
+#eac-container-example-ddg {
+    background-color: #DCDCDC;;
+    border-color: #DCDCDC;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05) inset, 0px 1px 0px rgba(255, 255, 255, 0.1);
+}
+
+#eac-container-example-ddg ul {
+    list-style: none
+
+}
+
+.gsc-tabHeader.gsc-tabhInactive {
+    border-left: 1px solid #E9E9E9;
+    border-right: 1px solid #E9E9E9;
+    border-top: 2px solid #E9E9E9;
+    background: #E9E9E9 none repeat scroll 0% 0%;
+    color: #676767;
+    cursor: pointer;
+}
+
+
+/* Google search */
+
+/* the width of the controls (keep same as gsc-results for flush look) */
+#searchcontrol { width:600px; }
+.gsc-control { width:600px; }
+/* the width of the search results box; no height value = nice auto look  */
+.gsc-results { width:600px; }
+/* the width of the search input */
+.gsc-input { width:20px; }
+/* hide "powered by google" (optional) */
+.gsc-branding { display:none; }
+.gs-title a { color:orange; font-weight:bold; }
+#searchcontrol a { color:orange; }

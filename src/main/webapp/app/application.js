@@ -22,7 +22,7 @@
             .when('/api/contact', {templateUrl: '/template/contact.html'})
             .when('/api/update/user', {templateUrl: '/template/updateUser.html'})
             .when('/api/update/login', {templateUrl:'/template/updateLogin.html'})
-           // .when('/api/search/google', {templateUrl:'/template/google-search-api.html'})
+            .when('/findGoogleLink', {templateUrl:'/template/google-search-api.html'})
             .otherwise({redirectTo: '/'});
     });
     angular.module("deleteMeApp.controllers", []);
